@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>My Gallery - Ven Visitacion</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- CSS Libraries -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      background-color: #0d0d0d;
+      color: #f0f0f0;
+      font-family: 'Poppins', sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    /* Hero Section */
+    .hero {
+      text-align: center;
+      padding: 90px 20px;
+      background: linear-gradient(135deg, #000, #1a0000);
+      border-radius: 20px;
+      box-shadow: 0 0 30px rgba(255, 0, 0, 0.25);
+      margin-bottom: 60px;
+      animation: fadeIn 1s ease;
+    }
+
+    .hero h1 {
+      color: #ff3333;
+      font-weight: 700;
+      font-size: 2.8rem;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      color: #ddd;
+      font-size: 1.1rem;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    h1.title {
+      border-left: 5px solid #ff1a1a;
+      padding-left: 15px;
+      font-weight: 700;
+      color: #ff1a1a;
+      margin-bottom: 30px;
+      text-transform: none;
+    }
+
+    /* Gallery Grid */
+    .portfolio-item {
+      position: relative;
+      overflow: hidden;
+      border-radius: 12px;
+      border: 1px solid #330000;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 0 15px rgba(255, 26, 26, 0.1);
+    }
+
+    .portfolio-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 25px rgba(255, 26, 26, 0.3);
+    }
+
+    .portfolio-item img {
+      width: 100%;
+      transition: transform 0.3s ease;
+    }
+
+    .portfolio-item:hover img {
+      transform: scale(1.05);
+    }
+
+    /* Overlay effect */
+    .portfolio-item::after {
+      content: "View";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(0);
+      background: rgba(255, 26, 26, 0.85);
+      color: #fff;
+      padding: 8px 18px;
+      border-radius: 25px;
+      transition: 0.3s ease;
+      font-size: 0.9rem;
+      letter-spacing: 1px;
+    }
+
+    .portfolio-item:hover::after {
+      transform: translate(-50%, -50%) scale(1);
+    }
+
+    /* Modal Lightbox */
+    .modal-content {
+      background-color: #1a0000;
+      border: none;
+      text-align: center;
+    }
+
+    .modal-content img {
+      max-width: 100%;
+      border-radius: 10px;
+    }
+
+    .btn-close {
+      filter: invert(1);
+    }
+
+    footer {
+      background: #1a0000;
+      color: #ccc;
+      padding: 30px 0;
+      text-align: center;
+      border-top: 1px solid #330000;
+      margin-top: 50px;
+    }
+
+    footer a {
+      color: #ff3333;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="header"></div>
+
+  <!-- Hero Section -->
+  <section class="hero container mt-5" data-aos="fade-down">
+    <h1>My Gallery</h1>
+    <p>Explore snapshots of my journey — each image capturing a moment, memory, or creative inspiration.</p>
+  </section>
+
+  <!-- Gallery Section -->
+  <section id="gallery" class="container py-3">
+    <div class="row g-4">
+      <!-- All gallery images restored -->
+      <div class="col-md-6 col-lg-4" data-aos="zoom-in"><div class="portfolio-item" data-bs-toggle="modal" data-bs-target="#lightboxModal" data-img="img/portfolio21.jpg"><img src="img/portfolio21.jpg" alt=""></div></div>
+      <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="50"><div class="portfolio-item" data-bs-toggle="modal" data-bs-target="#lightboxModal" data-img="img/portfolio22.jpg"><img src="img/portfolio22.jpg" alt=""></div></div>
+      <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="100"><div class="portfolio-item" data-bs-toggle="modal" data-bs-target="#lightboxModal" data-img="img/portfolio23.jpg"><img src="img/portfolio23.jpg" alt=""></div></div>
+      <div class="col-md-6 col-lg-4" data-aos="zoom-in"><div class="portfolio-item" data-bs-toggle="modal" data-bs-target="#lightboxModal" data-img="img/portfolio24.jpg"><img src="img/portfolio24.jpg" alt=""></div></div>
+      <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="50"><div class="portfolio-item" data-bs-toggle="modal" data-bs-target="#lightboxModal" data-img="img/portfolio25.jpg"><img src="img/portfolio25.jpg" alt=""></div></div>
+      <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="100"><div class="portfolio-item" data-bs-toggle="modal" data-bs-target="#lightboxModal" data-img="img/portfolio26.jpg"><img src="img/portfolio26.jpg" alt=""></div></div>
+      <div class="col-md-6 col-lg-4" data-aos="zoom-in"><div class="portfolio-item" data-bs-toggle="modal" data-bs-target="#lightboxModal" data-img="img/portfolio31.jpg"><img src="img/portfolio31.jpg" alt=""></div></div>
+      <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="50"><div class="portfolio-item" data-bs-toggle="modal" data-bs-target="#lightboxModal" data-img="img/portfolio28.jpg"><img src="img/portfolio28.jpg" alt=""></div></div>
+      <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="100"><div class="portfolio-item" data-bs-toggle="modal" data-bs-target="#lightboxModal" data-img="img/portfolio33.jpg"><img src="img/portfolio33.jpg" alt=""></div></div>
+      <div class="col-md-6 col-lg-4" data-aos="zoom-in"><div class="portfolio-item" data-bs-toggle="modal" data-bs-target="#lightboxModal" data-img="img/portfolio30.jpg"><img src="img/portfolio30.jpg" alt=""></div></div>
+      <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="50"><div class="portfolio-item" data-bs-toggle="modal" data-bs-target="#lightboxModal" data-img="img/portfolio29.jpg"><img src="img/portfolio29.jpg" alt=""></div></div>
+      <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="100"><div class="portfolio-item" data-bs-toggle="modal" data-bs-target="#lightboxModal" data-img="img/portfolio32.jpg"><img src="img/portfolio32.jpg" alt=""></div></div>
+    </div>
+  </section>
+
+  <!-- Lightbox Modal -->
+  <div class="modal fade" id="lightboxModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header border-0">
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <img src="" id="lightboxImage" alt="Gallery Image">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="footer"></div>
+
+  <!-- JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 800, once: true });
+
+    // Load header
+    fetch("header.html").then(res => res.text()).then(data => {
+      document.getElementById("header").innerHTML = data;
+      const current = location.pathname.split("/").pop();
+      document.querySelectorAll(".nav-link").forEach(link => {
+        if (link.getAttribute("href").includes(current)) link.classList.add("active");
+      });
+    });
+
+    // Load footer
+    fetch("footer.html").then(res => res.text()).then(data => {
+      document.getElementById("footer").innerHTML = data;
+    });
+
+    // Lightbox image
+    const lightboxImage = document.getElementById('lightboxImage');
+    document.querySelectorAll('.portfolio-item').forEach(item => {
+      item.addEventListener('click', function () {
+        const imgSrc = this.getAttribute('data-img');
+        lightboxImage.src = imgSrc;
+      });
+    });
+  </script>
+</body>
+</html>

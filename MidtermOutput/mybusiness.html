@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Business - Ven Visitacion</title>
+
+  <!-- Bootstrap & Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      background-color: #0b0b0b;
+      color: #e6e6e6;
+      font-family: 'Poppins', sans-serif;
+      overflow-x: hidden;
+    }
+
+    .title {
+      color: #ff1a1a;
+      border-left: 5px solid #ff1a1a;
+      padding-left: 10px;
+      margin-bottom: 40px;
+      animation: slideIn 1s ease;
+    }
+
+    section {
+      padding: 80px 0;
+    }
+
+    @keyframes slideIn {
+      from { opacity: 0; transform: translateX(-50px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+
+    /* Navbar (same as home page) */
+    .navbar {
+      background: linear-gradient(90deg,#1a0000);
+      border-bottom: 1px solid #330000;
+      box-shadow: 0 0 15px rgba(255, 0, 0, 0.2);
+    }
+
+    .navbar .nav-link {
+      color: #f5f5f5;
+      transition: 0.3s;
+    }
+
+    .navbar .nav-link:hover,
+    .navbar .nav-link.active {
+      color: #ff3333;
+    }
+
+    .navbar-brand {
+      color: #f6f6f6 !important;
+      font-weight: 600;
+  ;
+    }
+
+    /* BUSINESS INTRO */
+    .business-intro {
+      text-align: center;
+      animation: fadeUp 1s ease;
+    }
+
+    .business-intro p {
+      color: #bbb;
+      font-size: 1.1rem;
+      max-width: 700px;
+      margin: 10px auto 30px;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* BUSINESS CARDS */
+    .business-card {
+      background-color: #141414;
+      border: 1px solid #330000;
+      border-radius: 15px;
+      padding: 25px;
+      text-align: center;
+      transition: all 0.4s ease;
+      animation: fadeUp 1.2s ease;
+      height: 100%;
+    }
+
+    .business-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 0 20px rgba(255, 26, 26, 0.3);
+    }
+
+    .business-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      border-bottom: 2px solid #ff1a1a;
+    }
+
+    .business-card h5 {
+      color: #ff3333;
+      font-weight: 600;
+    }
+
+    .business-card p {
+      color: #ccc;
+      font-size: 0.95rem;
+    }
+
+    /* CTA SECTION */
+    .cta-section {
+      background: linear-gradient(90deg, rgba(255, 26, 26, 0.15), rgba(179, 0, 0, 0.15));
+      border: 1px solid #330000;
+      border-radius: 15px;
+      padding: 40px;
+      text-align: center;
+      margin-top: 80px;
+      animation: fadeUp 1.3s ease;
+    }
+
+    .cta-section h2 {
+      color: #ff3333;
+      font-weight: 600;
+    }
+
+    .cta-section p {
+      color: #ccc;
+      margin: 15px 0 25px;
+    }
+
+    .cta-section .btn {
+      background-color: #ff1a1a;
+      border: none;
+      color: #fff;
+      padding: 10px 25px;
+      border-radius: 30px;
+      font-weight: 500;
+      transition: background 0.3s ease;
+    }
+
+    .cta-section .btn:hover {
+      background-color: #b30000;
+    }
+
+    /* FOOTER */
+    footer {
+      background-color: #0d0000;
+      color: #ccc;
+      padding: 30px 0;
+      text-align: center;
+      border-top: 1px solid #330000;
+    }
+
+    footer a {
+      color: #ff3333;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* NAV ACTIVE LINK */
+    .nav-link.active {
+      color: #ff1a1a !important;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+  <div id="header"></div>
+
+  <section class="container mt-5">
+    <h1 class="title">My Business</h1>
+
+    <div class="business-intro">
+      <p>Welcome to the business section of my website. Here you’ll find my entrepreneurial projects that combine creativity, innovation, and technology.</p>
+      <p>Each project represents a step in my journey toward building sustainable, tech-driven ventures that make an impact.</p>
+    </div>
+
+    <!-- BUSINESS PROJECTS -->
+    <div class="row g-4 mt-4">
+      <div class="col-md-6 col-lg-4">
+        <div class="business-card">
+          <img src="img/portfolio28.jpg" alt="Business 1">
+          <h5>Faculty Evaluation System</h5>
+          <p>A web-based platform that allows students to evaluate their instructors efficiently. The system collects feedback on teaching performance, helping improve faculty effectiveness and the overall quality of education.</p>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="business-card">
+          <img src="img/portfolio22.jpg" alt="Business 2">
+          <h5>Network Design Plan for UCC using Cisco Packet Tracer</h5>
+          <p>A comprehensive network infrastructure design for Unida Christian Colleges using Cisco Packet Tracer, showcasing efficient connectivity, data security, and scalability for academic and administrative operations.</p>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="business-card">
+          <img src="img/portfolio31.jpg" alt="Business 3">
+          <h5>Automatic Fire Alarm Detector using Arduino</h5>
+          <p>An Arduino-based safety system designed to detect smoke or heat levels and automatically trigger alarms, providing an early warning mechanism to prevent fire-related hazards.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- CTA SECTION -->
+    <div class="cta-section mt-5">
+      <h2>Interested in Collaborating?</h2>
+      <p>I’m always open to partnerships, freelance projects, or startup collaborations that involve creativity and innovation.</p>
+      <a href="https://www.gmail.com" class="btn">Contact Me</a>
+    </div>
+  </section>
+
+  <div id="footer"></div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    // Load header and highlight active nav
+    fetch("header.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("header").innerHTML = data;
+        const current = location.pathname.split("/").pop();
+        document.querySelectorAll(".nav-link").forEach(link => {
+          if (link.getAttribute("href").includes(current)) {
+            link.classList.add("active");
+          }
+        });
+      });
+
+    // Load footer
+    fetch("footer.html")
+      .then(res => res.text())
+      .then(data => document.getElementById("footer").innerHTML = data);
+
+    // Fade-in animation on scroll
+    const fadeElements = document.querySelectorAll('.business-card, .cta-section');
+    const fadeInOnScroll = () => {
+      fadeElements.forEach(el => {
+        const rect = el.getBoundingClientRect();
+        if (rect.top < window.innerHeight - 50) {
+          el.style.opacity = 1;
+          el.style.transform = 'translateY(0)';
+        }
+      });
+    };
+    window.addEventListener('scroll', fadeInOnScroll);
+  </script>
+</body>
+</html>

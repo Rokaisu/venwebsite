@@ -1,0 +1,87 @@
+body {
+  background-color: #0d0d0d;
+  color: #e0e0e0;
+  font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
+}
+
+/* Navbar */
+.navbar {
+  background: #1a0000;
+  box-shadow: 0 2px 10px rgba(255, 0, 0, 0.2);
+}
+.navbar-brand {
+  font-weight: 700;
+}
+.navbar a.nav-link {
+  color: #f8f9fa !important;
+  font-weight: 500;
+  transition: 0.3s;
+}
+.navbar a.nav-link:hover,
+.navbar a.nav-link.active {
+  color: #ff1a1a !important;
+}
+.navbar-toggler {
+  border: none;
+}
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
+/* Footer */
+.footer {
+  background: #1a0000;
+  border-top: 1px solid #330000;
+  color: #ccc;
+}
+
+.footer-links a {
+  color: #ff3333;
+  text-decoration: none;
+  margin: 0 10px;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #ff6666;
+  text-decoration: underline;
+}
+
+.footer p {
+  font-size: 0.9rem;
+}
+
+body {
+  background-color: #0d0d0d;
+  color: #e0e0e0;
+  font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
+}
+
+/* Section Titles */
+h1.title {
+  border-left: 5px solid #ff1a1a;
+  padding-left: 15px;
+  font-weight: 700;
+  color: #ff1a1a;
+  margin-bottom: 30px;
+}
+
+/* Portfolio items */
+.portfolio-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  border: 1px solid #330000;
+  transition: 0.3s;
+}
+.portfolio-item img {
+  width: 100%;
+  transition: 0.3s;
+}
+.portfolio-item:hover img {
+  transform: scale(1.05);
+  opacity: 0.8;
+}
+
